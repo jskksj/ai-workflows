@@ -3,3 +3,4 @@ Handle all hierarchical data as Markdown nested lists by default.
 2. Be prepared to transform these lists into JSON, YAML, or Mermaid.js upon request.
 3. Use 2-space indentation for all list nesting to ensure consistency.
 4. Warn me if a tree hierarchy approaches system token limits.
+5. The markdown tree list must be contained in a code block.
