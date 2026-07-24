@@ -1,4 +1,4 @@
-# UTIL Chat Summarizer
+# UTIL Chat Summarizer sumguide
 *Jul 22, 2026, 10:32 AM*
 
 ---
@@ -625,4 +625,56 @@ I suggest the portmanteau **`sumguide`** for this summary (summarization + guide
 
 ---
 
-*Exported from Gab AI on Jul 24, 2026, 10:12 AM*
+### You
+*Jul 24, 2026, 10:23 AM*
+
+You are an autonomous chat summarization engine. Your task is to analyze the entire active conversation and output a structured Markdown summary that can be used as a seed input into a downstream LLM prompt.
+
+### Mandatory Pre-Flight Check:
+Before generating a summary, you must first identify which of the following three categories best describes the type of summary needed. If the user has not specified a category, remind them of these options and ask which one applies:
+
+1. **Exploratory / Ideation** – for brainstorming, philosophy, architectural discussions.  
+   Recommended section heads: `Core Concepts & Theses`, `Unresolved Tensions & Open Questions`, ` Actionable Takeaways`
+2. **Technical / Operational** – for coding, debugging, step‑by‑step workflows.  
+   Recommended section heads: ` Operational State`, ` Constraints & Parameters`, ` Next Execution Step`
+3. **Refining / Iterative** – for reviewing a previous summary, edits, corrections.  
+   Recommended section heads: ` Modifications & Deltas`, ` Validated Decisions`, ` Refined Seed Output`
+
+Based on your choice and the conversation’s subject, I will **suggest a single‑word portmanteau** for the summary file name. You may accept it or request an adjustment.
+
+If you have already provided the category and your preferred portmanteau, I will proceed directly.
+
+### Rules & Constraints (Once Parameters Are Confirmed):
+1. **Analyze Full History:** Read the entire conversation history from start to finish to extract the core essence, decisions, and open items.
+2. **Portmanteau Suggestion:** I will propose a single‑word portmanteau derived from the conversation’s core subject and the chosen category. The portmanteau must be a single lower‑case word (e.g., `loopguide` for a guide on loop engineering). You may accept it or ask for a different one.
+3. **Header Placement:** The first line of my output will be an H1 header containing your confirmed portmanteau (e.g., `# loopguide.md`).
+4. **Section Structure:** I will use the exact section heads from the chosen category to organize the summary. I will not add or omit sections without your consent.
+5. **Strict Output Format:** I will output **ONLY** the raw Markdown block. No introductory text, no conversational filler, no concluding remarks.
+
+sumguide is complete. Now create a new Core Concepts & Theses summary that omits all of the summary reasoning. The new summary must extract only the discussion on the mixed naming notation that was devised.
+
+
+---
+
+### Arya
+*Jul 24, 2026, 10:23 AM*
+
+### Reply #04
+
+I suggest the portmanteau **`mixnote`** for this summary (mixed + notation). If you accept, here is the raw Markdown block:
+
+---
+
+# mixnote.md
+
+### Core Concepts & Theses
+
+- **Dot Notation for Hierarchy:** A dot (`.`) represents a strict parent-child relationship. A name like `root.child` means that `child` is a nested leaf or component of `root`.
+- **Dash Notation for Sequential Master Templates:** A dash (`-`) represents the sequential application of different master template prompts upon a linked chain of summaries. For example, `root-sequence` indicates a sequence of summaries processed by distinct master prompts.
+- **Mixed Notation Permitted:** When a hierarchical leaf branch is followed by a sequential master‑template application, the notations combine, e.g., `parent.leaf-sequence`. Conversely, a sequence that later spawns a hierarchical leaf becomes `parent-sequence.leaf`.
+- **Portmanteau Constraint:** Every component in the lineage string must be a strict, single‑word portmanteau in lowercase, connected only by dots and dashes.
+- **Human‑in‑the‑Loop Lineage Declaration:** The AI never guesses whether the current summary is a hierarchical leaf or a sequential application. The user must explicitly specify the lineage type for each summary.
+
+---
+
+*Exported from Gab AI on Jul 24, 2026, 10:24 AM*
