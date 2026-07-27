@@ -1,39 +1,29 @@
-
-## AI Pair Programming ##
+## Integrated AI Pair Programming Workflow (SOP) ##
 ```
-Reply #01
-
-I have updated my understanding of our collaborative workflow to include your requirements for strict sequencing, atomicity in development, and clear reference tracking. Here is the revised framework for our process:
-
 1. High-Level Architecture
-
-- Understanding: This is the foundational stage where we define the core features and requirements. We will establish abstract, language-agnostic algorithms. It will remain entirely detached from low-level implementation or specific programming paradigms.
-- Reasoning: You prioritized a purely logical foundation to ensure the integrity of the design before applying technical constraints.
+- Understanding: Foundational stage defining core features and requirements via abstract, language-agnostic algorithms. Remains detached from implementation specificities.
+- Reasoning: Ensures design integrity before technical constraints are applied.
 
 2. Environment and Language Selection
-
-- Understanding: We will evaluate development environments and languages based on their ability to fulfill the specific architectural requirements established in the first stage.
-- Reasoning: This serves as the transition from abstract design to concrete implementation, ensuring our toolset is dictated by the architecture.
+- Understanding: Evaluation of tools based strictly on the requirements established in Stage 1.
+- Reasoning: Ensures tools remain servants to the architecture, not the drivers.
 
 3. Action Plan and Modularization
-
-- Understanding: We will convert the design into an action plan consisting of sub-projects. Each sub-project must be atomic, small, and optimized to minimize token usage during development and testing. We will determine if a singular language or a multi-language hybrid approach is better suited for the system.
-- Reasoning: Small, atomic units ensure maintainability and high-fidelity testing, which is essential for LLM-assisted development.
+- Understanding: Design conversion into an action plan of atomic, small sub-projects to minimize token usage and maximize testability.
+- Reasoning: Atomic units allow for the "Step-Verify-Commit-Proceed" loop to be applied effectively, preventing technical debt.
 
 4. Literate Programming
-
-- Understanding: All code must be produced using 'Literate Programming' principles. Explanatory comments must be physically adjacent to the code they describe, ensuring the codebase functions as readable documentation.
-- Reasoning: This maximizes clarity and ensures that the logic behind every snippet is transparent and easily scrutinized.
+- Understanding: All code produced with explanatory comments physically adjacent to the code. The codebase serves as its own documentation.
+- Reasoning: Maximizes transparency and ensures the logic is immediately auditable.
 
 5. Test-Driven Development (TDD) and Composition
+- Understanding: Strict TDD pattern: Unit tests first, followed by module composition tests.
+- Reasoning: Creates a rigorous validation loop that verifies individual units and total system health.
 
-- Understanding: We will strictly follow a TDD pattern. We will generate independent unit tests first, followed by architecture composition tests to ensure that the integrated modules fulfill the high-level plan.
-- Reasoning: This creates a rigorous validation loop, ensuring that every functional component is both verified individually and validated as part of the total architecture.
-
-6. Process Protocol (New Commands)
-
-- Sequential Reference: Every response issued in this interaction will be numbered sequentially (e.g., Reply #01, Reply #02).
-- Singular Unit Focus: During the implementation and testing phases, we will focus exclusively on one unit at a time. No parallel development or discussion of multiple units will occur. If a unit encounters an error, we will remain focused on that unit until it is fully resolved before moving forward.
-
-I have incorporated these instructions into our standard operating procedure. I am standing by for your next instruction.
+6. The SVCP Protocol (Step-Verify-Commit-Proceed)
+- Sequential Reference: Every response must be numbered (e.g., Reply #01).
+- Singular Unit Focus: Strictly one logic unit at a time. No parallel development.
+- Atomic Iteration: Every implementation task must be broken down into individual communication steps. Each step must conclude with a specific Verification requirement (e.g., git status, cargo check, or specific test output).
+- Commitment: We do not proceed to a new step until the verification of the current step is confirmed as successful by both parties.
+- Error Resolution: If a unit encounters an error, the protocol halts. We remain focused on that specific unit until the error is resolved, verified, and committed.
 ```
